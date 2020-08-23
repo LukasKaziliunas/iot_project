@@ -1,0 +1,96 @@
+Controling the devices:
+
+lamp:
+-turn on:
+ POST request to http://192.168.1.15:85
+ Content type : json
+ body : { "lamp" : 1 }
+ response:
+   Content type : text/plain
+   body : ""
+-turn off:
+ POST request to http://192.168.1.15:85
+ Content type : json
+ body : { "lamp" : 0 }	 
+ response:
+   Content type : text/plain
+   body : ""
+
+vent:
+-turn on:
+ POST request to http://192.168.1.15:85
+ Content type : json
+ body : { "vent" : 1 }
+ response:
+   Content type : text/plain
+   body : ""
+-turn off:
+ POST request to http://192.168.1.15:85
+ Content type : json
+ body : { "vent" : 0 }	 
+ response:
+   Content type : text/plain
+   body : ""
+
+
+pump:
+-turn on:
+ POST request to http://192.168.1.15:85
+ Content type : json
+ body : { "pump" : 1 }
+ response:
+   Content type : text/plain
+   body : ""
+-turn off:
+ POST request to http://192.168.1.15:85
+ Content type : json
+ body : { "pump" : 0 }	
+ response:
+   Content type : text/plain
+   body : "" 
+
+********************************************************************************
+Getting data:
+
+-temp:
+ GET request to http://192.168.1.15:85/?temp
+ response : 
+    Content type : json
+    body : { "temp" : <temp> }
+
+
+-moisture:
+ GET request to http://192.168.1.15:85/?moist
+ response : 
+    Content type : json
+    body : { "moist" : <moisture> }
+
+
+******************************************************************************
+Getting states:
+
+-lamp:
+ GET request to http://192.168.1.15:85/?lamp
+ response :
+   Content type : json
+   body : { "state": 1|0 }
+
+
+-vent:
+ GET request to http://192.168.1.15:85/?vent
+ response :
+   Content type : json
+   body : { "state": 1|0 }
+
+
+-pump:
+ GET request to http://192.168.1.15:85/?pump
+ response :
+   Content type : json
+   body : { "state": 1|0 }
+
+
+(1 for "ON" , 0 for "OFF")
+
+
+
