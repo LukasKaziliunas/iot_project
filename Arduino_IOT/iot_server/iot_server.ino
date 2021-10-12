@@ -72,7 +72,9 @@ void loop()
 
          client.println("HTTP/1.0 200 OK");
          client.println("Access-Control-Allow-Origin: *");
-
+         client.println("Access-Control-Allow-Methods: *");
+         client.println("Access-Control-Allow-Headers: Content-Type");
+         
          HttpRequestParser httpRP = HttpRequestParser(firstLine, bodyString);
         
          String resp = handleRequest(httpRP);
